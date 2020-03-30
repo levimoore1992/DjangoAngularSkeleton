@@ -26,4 +26,14 @@ services:
     container_name: frontend-skeleton
     build: frontend
     ports:
-      - "8080:80"
+      - "4200:4200"
+    volumes:
+      - ./frontend:/app
+      - node_modules:/app/node_modules
+    command: ng serve --proxy-config proxy.conf.js --live-reload true --host 0.0.0.0 --disable-host-check --poll 1
+
+    restart: always
+
+volumes:
+  db:
+  node_modules:
