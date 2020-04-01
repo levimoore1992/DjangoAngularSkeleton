@@ -1,4 +1,9 @@
-Open a terminal and run the command
+Open a terminal and run the commands
+`cd frontend`
+
+`npm install`
+
+`docker-compose build`
 
 `docker-compose up`
 
