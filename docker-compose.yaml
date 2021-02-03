@@ -24,7 +24,7 @@ services:
   dj:
     container_name: backend-skeleton
     build: backend
-    command: sh -c "python manage.py wwait_for_db && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:80"
+    command: sh -c "python manage.py wait_for_db && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:80"
     environment:
       - DB_HOST=db
       - DB_NAME=app
